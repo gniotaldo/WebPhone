@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stronka</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <body2>
+            <div id="prev" onclick="changePage(-1)"> < </div>
+            
+            <div id="middle">
+                <div id="calculator">
+                    <input id="display" readonly>
+                    <div id="keys">
+                        <button id="operator" onclick="addToDisplay('(')">(</button>
+                        <button id="operator" onclick="addToDisplay(')')">)</button>
+                        <button id="operator" onclick="dropFromDisplay()">
+                            <img src="back.png">
+                        </button>
+                        <button id="operator" onclick="addToDisplay('/')">/</button>
+                        <button onclick="addToDisplay('7')">7</button>
+                        <button onclick="addToDisplay('8')">8</button>
+                        <button onclick="addToDisplay('9')">9</button>
+                        <button id="operator" onclick="addToDisplay('*')">*</button>
+                        <button onclick="addToDisplay('4')">4</button>
+                        <button onclick="addToDisplay('5')">5</button>
+                        <button onclick="addToDisplay('6')">6</button>
+                        <button id="operator" onclick="addToDisplay('-')">-</button>
+                        <button onclick="addToDisplay('1')">1</button>
+                        <button onclick="addToDisplay('2')">2</button>
+                        <button onclick="addToDisplay('3')">3</button>
+                        <button id="operator" onclick="addToDisplay('+')">+</button>
+                        <button id="operator" onclick="clearDisplay()">C</button>
+                        <button onclick="addToDisplay('0')">0</button>
+                        <button id="operator" onclick="addToDisplay('.')">.</button>
+                        <button id="equal" onclick="calculate()">=</button>
+                    </div>
+                </div>
+
+                <div id="counter">
+                    <label id="result">0</label>
+                    <div id="buttons">
+                        <button onclick="decrease()">-</button>
+                        <button onclick="reset()">Reset</button>
+                        <button onclick="increase()">+</button>
+                    </div>
+                </div>
+                
+                <div id="hello">
+                    <label>What's your name?</label><br>
+                    <input id="name"><br>
+                    <div id="buttons">
+                        <button onclick="sayHello()">Submit</button>
+                    </div>
+                </div>
+
+                <div id="cps">
+                    <div id="head">
+                        <label id="clicks">Clicks: 0</label>
+                        <label id="time">Time: 10.0s</label>
+                    </div>
+                    <h5 id="title">CPS Test</h5>
+                    <div id="buttons">
+                        <button id="startBtn" onclick="play()">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="next" onclick="changePage(1)"> > </div>
+
+        </body2>
+        <div id="menu"  onmouseover="handleMouseOver()" onmouseout="hideApps()">
+                <button id="calc" onclick="goTo(0)">➗</button>
+                <button id="count" onclick="goTo(1)">🎰</button>
+                <button id="hey" onclick="goTo(2)">👋</button>
+                <button id="clicker" onclick="goTo(3)">🖱️</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
