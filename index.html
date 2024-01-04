@@ -47,7 +47,7 @@
                         <button onclick="increase()">+</button>
                     </div>
                 </div>
-                
+
                 <div id="hello">
                     <label>What's your name?</label><br>
                     <input id="name"><br>
@@ -66,6 +66,32 @@
                         <button id="startBtn" onclick="play()">Start</button>
                     </div>
                 </div>
+
+                <div id="clock">
+                    <div id="nowDate">Thu, 04.01.2024</div>
+                    <div id="nowTime">20:24:53</div>
+                    <div id="clockContainer">
+                        <div id="myClock">
+                            <div id="hour1" class="hourNumber">1</div>
+                            <div id="hour2" class="hourNumber">2</div>
+                            <div id="hour3" class="hourNumber">3</div>
+                            <div id="hour4" class="hourNumber">4</div>
+                            <div id="hour5" class="hourNumber">5</div>
+                            <div id="hour6" class="hourNumber">6</div>
+                            <div id="hour7" class="hourNumber">7</div>
+                            <div id="hour8" class="hourNumber">8</div>
+                            <div id="hour9" class="hourNumber">9</div>
+                            <div id="hour10" class="hourNumber">10</div>
+                            <div id="hour11" class="hourNumber">11</div>
+                            <div id="hour12" class="hourNumber">12</div>
+                            
+
+                            <div id="hourHand" class="hand"></div>
+                            <div id="minuteHand" class="hand"></div>
+                            <div id="secondHand" class="hand"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="next" onclick="changePage(1)"> > </div>
@@ -76,6 +102,7 @@
                 <button id="count" onclick="goTo(1)">🎰</button>
                 <button id="hey" onclick="goTo(2)">👋</button>
                 <button id="clicker" onclick="goTo(3)">🖱️</button>
+                <button id="clicker" onclick="goTo(4)">⏲</button>
         </div>
         <script src="index.js"></script>
     </body>

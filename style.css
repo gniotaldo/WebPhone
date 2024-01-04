@@ -23,6 +23,8 @@ body{
     border-radius: 3%;
     box-shadow: 0px 0px 40px;
     flex: 1;
+    left: 50%;
+    transform: translateX(-50%);
     
 }
 
@@ -129,7 +131,8 @@ img{
 #calculator,
 #counter,
 #hello,
-#cps {
+#cps,
+#clock {
     position: absolute;
     left: 1;
   }
@@ -148,6 +151,8 @@ img{
     box-shadow: 0px 0px 40px #000000;
     flex: 1;
     transition: left 0.5s ease, transform 0.5s ease;
+    left: 150%;
+    transform: translateX(-50%);
 }
 
 
@@ -190,6 +195,9 @@ img{
     box-shadow: 0px 0px 40px #000000;
     flex: 1;
     transition: left 0.5s ease, transform 0.5s ease;
+    
+    left: 150%;
+    transform: translateX(-50%);
 }
 
 #name{
@@ -234,6 +242,8 @@ img{
     flex: 1;
     transition: left 0.5s ease, transform 0.5s ease;
     user-select: none;
+    left: 150%;
+    transform: translateX(-50%);
 }
 
 #cps #head{
@@ -267,7 +277,7 @@ img{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0%;
+    bottom: -20%;
     background-color: #bdbdbd7e;
     transition: bottom 0.5s ease, background-color 0.5s ease;  
     margin: 0;
@@ -290,3 +300,88 @@ img{
 #menu button:hover{
     background-color: #b6b6b699;
 }
+
+
+
+#clock{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-family: Impact;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.792);
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 450px;
+    max-height: 450px;
+    overflow: hidden;
+    border-radius: 3%;
+    box-shadow: -1px -1px 2px #000000;
+    flex: 1;
+    transition: left 0.5s ease, transform 0.5s ease;
+    user-select: none;
+    left: 150%;
+    transform: translateX(-50%);
+}
+
+#clockContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#myClock {
+    position: absolute;
+    top: 120px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    background-color: #ffffff8a;
+}
+
+.hand {
+    position: absolute;
+    background-color: #333;
+    transform-origin: 50% 100%;
+}
+
+#hourHand {
+    width: 8px;
+    height: 50px;
+    top: 50px;
+    left: 96px;
+}
+
+#minuteHand {
+    width: 4px;
+    height: 80px;
+    top: 23px;
+    left: 98px;
+}
+
+#secondHand {
+    width: 2px;
+    height: 90px;
+    top: 10px;
+    left: 99px;
+    background-color: red;
+}
+
+.hourNumber {
+    position: absolute;
+    font-size: 14px;
+}
+
+#hour1 { top: 11px; left: 144px;}
+#hour2 { top: 45px; left: 178px;}
+#hour3 { top: 90px; left: 190px; font-weight: bold; font-size: 18px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;}
+#hour4 { top: 140px; left: 178px;}
+#hour5 { top: 173px; left: 144px;}
+#hour6 { top: 180px; left: 96px; font-weight: bold; font-size: 18px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;}
+#hour7 { top: 174px; left: 52px;}
+#hour8 { top: 140px; left: 14.5px;}
+#hour9 { top: 90px; left: 0px; font-weight: bold; font-size: 18px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;}
+#hour10 { top: 46px; left: 14px;}
+#hour11 { top: 11px; left: 48px;}
+#hour12 { top: 0px; left: 92.5px; font-weight: bold; font-size: 18px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;}

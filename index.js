@@ -12,18 +12,43 @@ const title = document.getElementById("title");
 const clickCounter = document.getElementById("clicks");
 const timer = document.getElementById("time");
 const menu = document.getElementById("menu");
+const clock = document.getElementById("clock");
+const nowDate = document.getElementById("nowDate");
+const nowTime = document.getElementById("nowTime");
+
+
+
+const updateDateTime = () => {
+    const today = new Date();
+    nowDate.textContent = new Intl.DateTimeFormat('pl-PL', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric' }).format(today);
+    nowTime.textContent = new Intl.DateTimeFormat('pl-PL', { hour: 'numeric', minute: 'numeric', second: 'numeric' }).format(today);
+};
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    const hourDeg = (hours % 12 + minutes / 60) * 30;
+    const minuteDeg = (minutes + seconds / 60) * 6;
+    const secondDeg = seconds * 6;
+
+    document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
+    document.getElementById('minuteHand').style.transform = `rotate(${minuteDeg}deg)`;
+    document.getElementById('secondHand').style.transform = `rotate(${secondDeg}deg)`;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // Initial update
 
 display.value = "0";
-let pages = [calc,counter,hello,cps];
+let pages = [calc,counter,hello,cps,clock];
 let page = 0;
-calc.style.transform = "translateX(-50%)";
-calc.style.left = "50%";
-counter.style.left = "150%";
-counter.style.transform = "translateX(-50%)";
-hello.style.left = "150%";
-hello.style.transform = "translateX(-50%)";
-cps.style.left = "150%";
-cps.style.transform = "translateX(-50%)";
 
 function addToDisplay(input){
     if (display.value === "error" || display.value === "NaN") display.value = input;
